@@ -1,43 +1,107 @@
-# Portfolio (Scaffold)
+# Portfolio — Divyadharshini Y ✅
 
-This repository contains a scaffold for a personal portfolio:
+A clean, single-page **React** portfolio built with **Bootstrap**, showcasing projects, skills, and contact options. The site is a static frontend that can be deployed to **GitHub Pages** (see Deploy section).
 
-- Frontend: React + Bootstrap (dark theme)
-- Backend: Spring Boot (Java) + MySQL (optional/local only)
-- Database: MySQL schema and seed (optional)
+---
 
-## Quick start
+## 🔍 Live demo
 
-1. Frontend
-   - cd frontend
-   - npm install
-   - Create a `.env` file in `frontend/` with your EmailJS keys (recommended):
-     - REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-     - REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
-     - REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
-   - npm start
-   - npm run build
-   - npm run deploy (deploys to GitHub Pages)
+- Deployed GitHub Pages URL: https://DivyadharshiniYuvaraj.github.io/Portfolio
 
-2. Backend (optional, local only)
-   - cd backend
-   - ./mvnw spring-boot:run
-   - Import `db/schema.sql` if you want the database locally
+---
 
-### Notes
-- Docker configuration removed per user request. This repository is set up for a static frontend hosted on GitHub Pages.
-- Contact form uses EmailJS (client-side). Set your EmailJS service/template/public key in the `frontend/.env` or replace placeholders in `Contact.js`.
-- Backend can be deployed to Heroku. Set Heroku Config Vars:
-  - SPRING_DATASOURCE_URL = jdbc:mysql://<host>:<port>/<database>?useSSL=false&serverTimezone=UTC
-  - SPRING_DATASOURCE_USERNAME = <db-username>
-  - SPRING_DATASOURCE_PASSWORD = <db-password>
+## Features ✨
 
-  If you use a Heroku MySQL add-on (e.g., JawsDB), copy the JDBC URL into `SPRING_DATASOURCE_URL` (convert the add-on URL to JDBC format if necessary).
+- Responsive single-page React application using `react-router-dom` for navigation.
+- Dark theme with Bootstrap styling and a custom `styles.css`.
+- Projects are loaded from `frontend/src/data/projects.json` and rendered in `Projects`.
+- Contact form (currently submits to a Google Form) for simple message collection.
+- Resume available at `/resume.pdf` (in `frontend/public`).
+- Easy deployment with `gh-pages` (`npm run deploy`).
 
-  Basic steps to deploy backend to Heroku:
-  1. Create a Heroku app: `heroku create your-app-name`.
-  2. Add a MySQL add-on (JawsDB) or provision a managed MySQL and set config vars.
-  3. Push: `git push heroku main` (or `git push heroku master` depending on branch).
-  4. Heroku will build the Spring Boot app and run the `Procfile` to start it.
+---
 
-- Frontend deploy URL: `https://DivyadharshiniYuvaraj.github.io/portfolio` (update if repo name differs)
+## Tech stack & dependencies ⚙️
+
+- React, React Router, Bootstrap
+- Bundler / scripts: `react-scripts` (Create React App)
+- Optional packages found in `package.json`: `axios`, `@emailjs/browser` (not currently used by the contact form), `gh-pages`
+
+---
+
+## Quick start (frontend only) 🚀
+
+1. Install dependencies
+
+```bash
+cd frontend
+npm install
+```
+
+2. Run locally (dev server)
+
+```bash
+npm start
+```
+
+3. Build for production
+
+```bash
+npm run build
+```
+
+4. Deploy to GitHub Pages
+
+```bash
+npm run deploy
+```
+
+Notes:
+- The `homepage` field in `frontend/package.json` is set to the GitHub Pages URL — update that if you host under a different user/org or repo name.
+- This repository currently contains the frontend only (no backend folder is included).
+
+---
+
+## Contact form behavior (important) ⚠️
+
+The current `Contact` page posts form responses to a **Google Form** (see `Contact.js`). If you'd rather send emails from the client using EmailJS:
+
+1. Replace the form in `Contact.js` to use `@emailjs/browser` and handle submissions with `emailjs.send`.
+2. Add a `.env` file in `frontend/` with values like:
+
+```
+REACT_APP_EMAILJS_SERVICE_ID=your_service_id
+REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+3. Restart the dev server after adding the env file.
+
+---
+
+## Project structure 📁
+
+Key files/folders (frontend):
+
+- `frontend/src/`
+  - `App.js` — routes and main layout
+  - `index.js` — app bootstrap (uses `HashRouter`)
+  - `components/` — `Header`, `Home`, `About`, `Skills`, `Projects`, `Contact`, `Footer`
+  - `data/projects.json` — projects shown on Projects page
+  - `styles.css` — custom styles
+- `frontend/public/resume.pdf` — downloadable resume
+
+---
+
+## Author & links 📬
+
+- **Divyadharshini Y**
+  - GitHub: https://github.com/DivyadharshiniYuvaraj
+  - LinkedIn: https://www.linkedin.com/in/divyadharshiniy/
+
+---
+
+## License / Notes 📝
+- This repository is provided as-is. Feel free to adapt the contact method, theme, and build/deploy flow to your needs.
+- If you want me to add a backend integration, CI/CD, or EmailJS-based contact flow, open an issue or send a PR.
+
