@@ -3,13 +3,13 @@
     "id": 1,
     "title": "Student Result Management System",
     "description": "Java-based application with Swing UI and MySQL backend for managing student results, grade calculation, and reports using JDBC.",
-    "github": "https://github.com/your-username/student-result-management"
+    "github": "https://github.com/DivyadharshiniYuvaraj/student-result-management"
   },
   {
     "id": 2,
     "title": "Anticipation Analysis",
     "description": "AI-driven system to forecast human expectations using behavioral data, focusing on ethical and transparent predictions.",
-    "github": "https://github.com/your-username/anticipation-analysis"
+    "github": "https://github.com/DivyadharshiniYuvaraj/anticipation-analysis"
   },
   {
     "id": 3,
