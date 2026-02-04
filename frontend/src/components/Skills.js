@@ -12,7 +12,6 @@ export default function Skills() {
             <li>Java</li>
             <li>Python</li>
             <li>SQL</li>
-            <li>C (Basic)</li>
           </ul>
         </div>
 
