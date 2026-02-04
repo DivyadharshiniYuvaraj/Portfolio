@@ -1,13 +1,97 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   background-color: #0b0c0d;
   color: #e5e7eb;
 }
 
-.card {
-  background-color: #dbbdbf;
-  border: 1px solid rgba(255,255,255,0.06);
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #111315;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 a {
   color: #60a5fa;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section h2 {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card.bg-dark {
+  background: linear-gradient(145deg, #96b1d3, #23282c);
+  border-radius: 14px;
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.card.bg-dark:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+  border-color: #0dcaf0;
+}
+
+.card-body {
+  padding: 1.5rem;
+  background-color: transparent; 
+}
+
+/* Title */
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  color: #b6c2cf;
+}
+
+.btn-outline-info {
+  border-radius: 20px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  border: 1px solid #000000;
+  color: #0dcaf0;
+  background-color: transparent;
+}
+
+.btn-outline-info:hover {
+  background-color: #0dcaf0;
+  color: #000;
 }
