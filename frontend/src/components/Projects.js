@@ -6,10 +6,10 @@ export default function Projects() {
     <section>
       <h2 className="mb-4">Projects</h2>
 
-      <div className="row">
+      <div className="row g-4">
         {projects.map((p) => (
-          <div className="col-md-6" key={p.id}>
-            <div className="card mb-4 bg-dark text-light border-0">
+          <div className="col-md-4" key={p.id}>
+            <div className="card bg-dark text-light border-0 h-100">
               <div className="card-body">
                 <h5 className="card-title">{p.title}</h5>
 

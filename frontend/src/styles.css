@@ -95,3 +95,74 @@ section h2 {
   background-color: #0dcaf0;
   color: #000;
 }
+
+/* =========================
+   GLOBAL LAYOUT
+   ========================= */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+.app-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0b0c0d;
+}
+
+/* =========================
+   FIXED HEADER
+   ========================= */
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px; /* adjust if needed */
+  z-index: 1000;
+  background-color: #0b0c0d;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   FIXED FOOTER
+   ========================= */
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 56px; /* adjust if needed */
+  z-index: 1000;
+  background-color: #111315;
+  color: #9ca3af;
+  text-align: center;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   SCROLLABLE CONTENT AREA
+   ========================= */
+.scroll-container {
+  margin-top: 64px;   /* SAME as header height */
+  margin-bottom: 56px; /* SAME as footer height */
+  height: calc(100vh - 120px); /* header + footer */
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   SNAP SECTIONS
+   ========================= */
+.snap-section {
+  min-height: calc(100vh - 120px);
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
