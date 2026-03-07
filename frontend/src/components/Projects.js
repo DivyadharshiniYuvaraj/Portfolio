@@ -1,34 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import projects from "../data/projects.json";
 
 export default function Projects() {
+  const [filter, setFilter] = useState("All");
+
+  const filters = ["All", "Java", "React", "SQL"];
+
+  const filteredProjects =
+    filter === "All"
+      ? projects
+      : projects.filter((p) => p.tags.includes(filter));
+
   return (
-    <section>
-      <h2 className="mb-4">Projects</h2>
+    <section className="projects-section">
+      <h2 className="projects-title">Featured Projects</h2>
 
-      <div className="row g-4">
-        {projects.map((p) => (
-          <div className="col-md-4" key={p.id}>
-            <div className="card bg-dark text-light border-0 h-100">
-              <div className="card-body">
-                <h5 className="card-title">{p.title}</h5>
+      {/* FILTER BAR */}
+      <div className="project-filters">
+        {filters.map((f) => (
+          <button
+            key={f}
+            className={`filter-btn ${filter === f ? "active" : ""}`}
+            onClick={() => setFilter(f)}
+          >
+            {f}
+          </button>
+        ))}
+      </div>
 
-                <p className="card-text text-muted">
-                  {p.description}
-                </p>
+      {/* PROJECT GRID */}
+      <div className="projects-grid">
+        {filteredProjects.map((p) => (
+          <div className="project-card" key={p.id}>
+            <span className="project-category">{p.category}</span>
 
-                {p.github && (
-                  <a
-                    className="btn btn-sm btn-outline-info"
-                    href={p.github}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View on GitHub
-                  </a>
-                )}
-              </div>
+            <h3 className="project-name">{p.title}</h3>
+
+            <p className="project-desc">{p.description}</p>
+
+            <div className="project-tags">
+              {p.tags.map((tag, i) => (
+                <span key={i} className="tag">
+                  {tag}
+                </span>
+              ))}
             </div>
+
+            <a
+              href={p.github}
+              target="_blank"
+              rel="noreferrer"
+              className="github-btn"
+            >
+              GitHub
+            </a>
           </div>
         ))}
       </div>

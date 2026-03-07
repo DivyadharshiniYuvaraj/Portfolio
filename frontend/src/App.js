@@ -1,42 +1,54 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="app-wrapper">
+    <>
+      {/* FIXED HEADER */}
       <Header />
 
+      {/* SCROLLABLE CONTENT */}
       <div className="scroll-container">
-        <section className="snap-section">
-          <Home />
+        <section id="home" className="snap-section">
+          <div className="section-inner">
+            <Home />
+          </div>
         </section>
 
-        <section className="snap-section">
-          <About />
+        <section id="about" className="snap-section">
+          <div className="section-inner">
+            <About />
+          </div>
         </section>
 
-        <section className="snap-section">
-          <Skills />
+        <section id="skills" className="snap-section">
+          <div className="section-inner">
+            <Skills />
+          </div>
         </section>
 
-        <section className="snap-section">
-          <Projects />
+        <section id="projects" className="snap-section">
+          <div className="section-inner">
+            <Projects />
+          </div>
         </section>
 
-        <section className="snap-section">
-          <Contact />
+        <section id="contact" className="snap-section">
+          <div className="section-inner">
+            <Contact />
+          </div>
         </section>
       </div>
 
+      {/* FIXED FOOTER */}
       <Footer />
-    </div>
+    </>
   );
 }
 

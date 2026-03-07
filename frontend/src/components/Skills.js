@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Skills() {
   return (
-    <section className="card p-4 bg-dark text-light border-0">
+    <section className="card p-4">
       <h2 className="mb-4">Skills</h2>
 
       <div className="row">
@@ -32,8 +32,6 @@ export default function Skills() {
             <li>REST APIs</li>
             <li>JDBC</li>
             <li>Data Analysis & EDA</li>
-            <li>Clean Architecture</li>
-            <li>Problem Solving</li>
           </ul>
         </div>
       </div>

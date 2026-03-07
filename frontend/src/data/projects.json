@@ -2,26 +2,33 @@
   {
     "id": 1,
     "title": "Student Result Management System",
+    "category": "WEB DEVELOPMENT",
     "description": "Java-based application with Swing UI and MySQL backend for managing student results, grade calculation, and reports using JDBC.",
+    "tags": ["Java", "JDBC", "MySQL"],
     "github": "https://github.com/DivyadharshiniYuvaraj/Student_Result_Management_System"
   },
-
   {
     "id": 2,
     "title": "E-Commerce",
-    "description": "This project was bootstrapped with Create React App.",
+    "category": "FRONTEND",
+    "description": "React-based e-commerce application bootstrapped with Create React App.",
+    "tags": ["React", "JavaScript"],
     "github": "https://github.com/DivyadharshiniYuvaraj/E-Commerce"
   },
   {
     "id": 3,
     "title": "Connect-Four",
-    "description": "React + java connect-four game with a simple UI and basic AI opponent.",
+    "category": "GAME DEVELOPMENT",
+    "description": "React + Java Connect-Four game with a simple UI and basic AI opponent.",
+    "tags": ["React", "Java"],
     "github": "https://github.com/DivyadharshiniYuvaraj/connect-four"
   },
   {
     "id": 4,
     "title": "ToDoList",
-    "description": "A Full Stack ToDo List Application.",
+    "category": "FULL STACK",
+    "description": "A full stack ToDo List application with frontend and backend integration.",
+    "tags": ["React", "SQL"],
     "github": "https://github.com/DivyadharshiniYuvaraj/ToDoList---Frontend"
   }
 ]

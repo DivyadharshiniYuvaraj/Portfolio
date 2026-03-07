@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <section className="card p-4 bg-dark text-light border-0">
+    <section className="card p-4">
       <h2 className="mb-3">About Me</h2>
 
       <p className="mb-4">

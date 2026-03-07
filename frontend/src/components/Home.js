@@ -1,48 +1,52 @@
 import React from "react";
+import profile from "../asserts/profile.jpeg"; // we’ll add this next
 
 export default function Home() {
   return (
-    <section className="text-center py-5">
-      <h1 className="display-5 fw-bold">
-        Hi, I’m <span className="text-info">Divyadharshini Y</span>
-      </h1>
+    <div className="home-hero">
+      <div className="hero-content">
+        <h1>
+          Hi, I’m <span className="highlight">Divyadharshini Y</span>
+        </h1>
 
-      <p className="lead mt-3">
-        Java Full Stack Developer
-      </p>
+        <p className="hero-subtitle">
+          Java Full Stack Developer | JLPT N4 Certified
+        </p>
 
-      <p className="text-muted mt-2">
-        Building scalable Java applications with clean logic,
-        real-world problem solving, and data-driven thinking.
-      </p>
+        <p className="hero-desc">
+          Building scalable web applications with modern frontend
+          frameworks and robust backend systems.
+        </p>
 
-      <div className="d-flex justify-content-center gap-3 mt-4">
-        <a
-          className="btn btn-outline-light"
-          href="https://github.com/DivyadharshiniYuvaraj"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub
-        </a>
+        <div className="hero-actions">
+          <a
+            href="https://github.com/DivyadharshiniYuvaraj"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-outline"
+          >
+            GitHub
+          </a>
 
-        <a
-          className="btn btn-outline-light"
-          href="https://www.linkedin.com/in/divyadharshiniy/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          LinkedIn
-        </a>
+          <a
+            href="https://www.linkedin.com/in/divyadharshiniy/"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-outline"
+          >
+            LinkedIn
+          </a>
 
-        <a
-          className="btn btn-info text-dark"
-          href="/resume.pdf"
-          download
-        >
-          Download Resume
-        </a>
+          <a href="/resume.pdf" className="btn-primary">
+            Download Resume
+          </a>
+        </div>
       </div>
-    </section>
+
+      <div className="hero-image">
+        <img src={profile} alt="Divyadharshini Y" />
+      </div>
+
+    </div>
   );
 }
